@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1.75rem 1.25rem;
+  padding: 0 1.25rem;
   min-height: 200px;
   background: rgba(0, 0, 0, 0.85);
   color: #ffffff;
@@ -141,8 +141,8 @@
 
 @media (min-width: 768px) {
   .app-header {
-    padding: 2rem 1.5rem;
-    min-height: 260px;
+    padding: 0 1.5rem;
+    min-height: 240px;
 
     .brand__img {
       height: 200px;
