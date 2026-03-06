@@ -21,5 +21,5 @@ import { FooterComponent } from '../../components/footer/footer.component';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  readonly phoneNumber = '0895544420';
+  readonly phoneNumber = '+359895544420';
 }
