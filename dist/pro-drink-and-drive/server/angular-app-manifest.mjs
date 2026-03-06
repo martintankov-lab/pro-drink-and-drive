@@ -10,12 +10,12 @@ export default {
     "chunk-RFAHL67O.js"
   ],
   "src/app/pages/home/home.component.ts": [
-    "chunk-LOFSC2LL.js"
+    "chunk-QUWFGY6I.js"
   ]
 },
   assets: {
-    'index.csr.html': {size: 34146, hash: '6ce91b085f6226890042cbd1bea0bf8b295f8fff3875857dcd71f1b2277e51e0', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 27573, hash: 'c7f85881737a5e963f2e315a2e2f1bc2033bdfb281718b4d39acee37c026d1c7', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 34146, hash: '9e052766df3dcb726a82cc7b94b05e2df658e4cd6b35469a70f7881b8205502f', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 27573, hash: 'e3a0838453fb034c76f807fdc99cb1e7f8276816941649f90a1e3dc4f906c240', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
     'styles-ZJTXBPAZ.css': {size: 7126, hash: 'AYMTBwra9bM', text: () => import('./assets-chunks/styles-ZJTXBPAZ_css.mjs').then(m => m.default)}
   },
 };
