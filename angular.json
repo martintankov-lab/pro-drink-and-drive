@@ -54,6 +54,7 @@
               }
             ],
             "styles": [
+              "public/assets/fonts/material-icons/material-icons.css",
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
