@@ -12,6 +12,7 @@ import { Meta, Title } from '@angular/platform-browser';
 export class AppComponent {
   constructor(private meta: Meta, private title: Title) {
     this.title.setTitle('Pro Drink and Drive – професионален „дринк енд драйв“ в София');
+    console.log('here')
 
     this.meta.addTags([
       {
