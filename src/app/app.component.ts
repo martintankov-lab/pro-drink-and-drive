@@ -60,8 +60,11 @@ export class AppComponent {
       },
     ]);
 
+    // fix for translations not updating in the app when changing the language
     this.translateService.onLangChange.subscribe(() => {
-      this.appRef.tick();
+      setTimeout(() => {
+        this.appRef.tick();
+      }, 100);
     });
   }
 }
