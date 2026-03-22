@@ -1,53 +1,51 @@
 <header class="app-header">
-  @if (i18n.currentLang()) {
-    <a routerLink="/" class="brand" [attr.aria-label]="'APP_TITLE' | translate">
-      <img src="/assets/images/pro-drink-and-drive.jpeg" alt="Pro Drink and Drive" class="brand__img" />
-    </a>
+  <a routerLink="/" class="brand" [attr.aria-label]="'APP_TITLE' | translate">
+    <img src="/assets/images/pro-drink-and-drive.jpeg" alt="Pro Drink and Drive" class="brand__img" />
+  </a>
 
-    <button mat-icon-button class="app-header__hamburger" aria-label="Menu" (click)="mobileMenuOpen = !mobileMenuOpen">
-      <mat-icon>{{ mobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
-    </button>
+  <button mat-icon-button class="app-header__hamburger" aria-label="Menu" (click)="mobileMenuOpen = !mobileMenuOpen">
+    <mat-icon>{{ mobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
+  </button>
 
-    <div class="app-header__right">
-      <nav class="app-header__nav" [class.app-header__nav--open]="mobileMenuOpen">
-        @for (link of navLinks; track link.fragment) {
-          <a
-            [href]="'#' + link.fragment"
-            class="app-header__nav-link"
-            (click)="scrollToSection(link.fragment, $event)"
-          >
-            {{ link.labelKey | translate }}
-          </a>
-        }
-      </nav>
-      <div class="lang-switcher">
-        <button
-          mat-button
-          [matMenuTriggerFor]="langMenu"
-          class="lang-btn"
-          [matTooltip]="i18n.currentLang() === 'bg' ? ('LANG_BG' | translate) : ('LANG_EN' | translate)"
-          aria-label="Language"
+  <div class="app-header__right">
+    <nav class="app-header__nav" [class.app-header__nav--open]="mobileMenuOpen">
+      @for (link of navLinks; track link.fragment) {
+        <a
+          [href]="'#' + link.fragment"
+          class="app-header__nav-link"
+          (click)="scrollToSection(link.fragment, $event)"
         >
-          <span class="lang-btn__inner">
-            <span class="lang-btn__label">
-              {{ i18n.currentLang() === 'bg' ? ('LANG_BG' | translate) : ('LANG_EN' | translate) }}
-            </span>
-            <img
-              [src]="i18n.currentLang() === 'bg' ? languages[0].icon : languages[1].icon"
-              [alt]="i18n.currentLang() === 'bg' ? 'BG' : 'EN'"
-              class="lang-btn__flag"
-            />
+          {{ link.labelKey | translate }}
+        </a>
+      }
+    </nav>
+    <div class="lang-switcher">
+      <button
+        mat-button
+        [matMenuTriggerFor]="langMenu"
+        class="lang-btn"
+        [matTooltip]="i18n.currentLang() === 'bg' ? ('LANG_BG' | translate) : ('LANG_EN' | translate)"
+        aria-label="Language"
+      >
+        <span class="lang-btn__inner">
+          <span class="lang-btn__label">
+            {{ i18n.currentLang() === 'bg' ? ('LANG_BG' | translate) : ('LANG_EN' | translate) }}
           </span>
-        </button>
-        <mat-menu #langMenu="matMenu">
-          @for (lang of languages; track lang.code) {
-            <button mat-menu-item (click)="useLanguage(lang.code)">
-              <img [src]="lang.icon" [alt]="lang.tooltip" class="lang-menu__flag" />
-              <span>{{ lang.tooltip }}</span>
-            </button>
-          }
-        </mat-menu>
-      </div>
+          <img
+            [src]="i18n.currentLang() === 'bg' ? languages[0].icon : languages[1].icon"
+            [alt]="i18n.currentLang() === 'bg' ? 'BG' : 'EN'"
+            class="lang-btn__flag"
+          />
+        </span>
+      </button>
+      <mat-menu #langMenu="matMenu">
+        @for (lang of languages; track lang.code) {
+          <button mat-menu-item (click)="useLanguage(lang.code)">
+            <img [src]="lang.icon" [alt]="lang.tooltip" class="lang-menu__flag" />
+            <span>{{ lang.tooltip }}</span>
+          </button>
+        }
+      </mat-menu>
     </div>
-  }
+  </div>
 </header>

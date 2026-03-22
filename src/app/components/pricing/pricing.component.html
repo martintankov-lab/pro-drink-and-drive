@@ -1,23 +1,21 @@
 <section id="pricing" class="pricing-section">
-  @if (i18n.currentLang()) {
-    <h2 class="pricing-section__title">{{ 'PRICES_SOFIA' | translate }}</h2>
-    <div class="pricing-section__grid">
-      <div class="pricing-card">
-        <span class="pricing-card__label">{{ 'PRICE_PER_KM' | translate }}</span>
-        <mat-icon class="pricing-card__icon">straighten</mat-icon>
-        <span class="pricing-card__value">2.00 €</span>
-      </div>
-      <div class="pricing-card">
-        <span class="pricing-card__label">{{ 'MIN_JOURNEY_KM' | translate }}</span>
-        <mat-icon class="pricing-card__icon">local_offer</mat-icon>
-        <span class="pricing-card__value">12.00 €</span>
-      </div>
-      <div class="pricing-card">
-        <span class="pricing-card__label">{{ 'WORKING_HOURS' | translate }}</span>
-        <mat-icon class="pricing-card__icon">schedule</mat-icon>
-        <span class="pricing-card__value">21:00 - 06:00</span>
-        <span class="pricing-card__sub">{{ 'EVERY_DAY' | translate }}</span>
-      </div>
+  <h2 class="pricing-section__title">{{ 'PRICES_SOFIA' | translate }}</h2>
+  <div class="pricing-section__grid">
+    <div class="pricing-card">
+      <span class="pricing-card__label">{{ 'PRICE_PER_KM' | translate }}</span>
+      <mat-icon class="pricing-card__icon">straighten</mat-icon>
+      <span class="pricing-card__value">2.00 €</span>
     </div>
-  }
+    <div class="pricing-card">
+      <span class="pricing-card__label">{{ 'MIN_JOURNEY_KM' | translate }}</span>
+      <mat-icon class="pricing-card__icon">local_offer</mat-icon>
+      <span class="pricing-card__value">12.00 €</span>
+    </div>
+    <div class="pricing-card">
+      <span class="pricing-card__label">{{ 'WORKING_HOURS' | translate }}</span>
+      <mat-icon class="pricing-card__icon">schedule</mat-icon>
+      <span class="pricing-card__value">21:00 - 06:00</span>
+      <span class="pricing-card__sub">{{ 'EVERY_DAY' | translate }}</span>
+    </div>
+  </div>
 </section>

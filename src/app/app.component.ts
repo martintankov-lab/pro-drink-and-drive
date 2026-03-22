@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { ApplicationRef, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,16 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor(private meta: Meta, private title: Title) {
+  constructor(
+    private meta: Meta,
+    private title: Title,
+    translate: TranslateService,
+    appRef: ApplicationRef
+  ) {
     this.title.setTitle('Pro Drink and Drive – професионален „дринк енд драйв“ в София');
-    console.log('here')
+
+    // Re-run change detection when language changes so | translate updates everywhere
+    translate.onLangChange.subscribe(() => queueMicrotask(() => appRef.tick()));
 
     this.meta.addTags([
       {
