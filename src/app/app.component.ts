@@ -18,7 +18,7 @@ export class AppComponent {
     appRef: ApplicationRef
   ) {
     this.title.setTitle('Pro Drink and Drive – професионален „дринк енд драйв“ в София');
-    console.log('here')
+    console.log('here1')
 
     // Re-run change detection when language changes so | translate updates everywhere
     translate.onLangChange.subscribe(() => queueMicrotask(() => appRef.tick()));
