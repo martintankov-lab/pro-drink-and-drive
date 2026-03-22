@@ -13,6 +13,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Browser output: `dist/pro-drink-and-drive/browser`.
+
+**Cloudflare Pages:** see [CLOUDFLARE.md](./CLOUDFLARE.md) for output directory, Node version, and memory tips.
 
 ## Running unit tests
 
