@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { I18nService } from '../../services/i18n.service';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 })
 export class HeaderComponent {
   mobileMenuOpen = false;
-  currentLang = 'bg';
   readonly navLinks = [
     { fragment: 'call-section', labelKey: 'NAV_CALL' },
     { fragment: 'phone-section', labelKey: 'NAV_PHONE' },
@@ -35,13 +35,10 @@ export class HeaderComponent {
     { code: 'en', icon: '/assets/icons/united-kingdom.png', tooltip: 'English' },
   ] as const;
 
-  constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang || 'bg';
-    this.translate.onLangChange.subscribe((e) => (this.currentLang = e.lang));
-  }
+  constructor(public i18n: I18nService) {}
 
   useLanguage(code: string): void {
-    this.translate.use(code);
+    this.i18n.use(code);
   }
 
   scrollToSection(fragment: string, event: Event): void {

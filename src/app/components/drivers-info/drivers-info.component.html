@@ -1,6 +1,8 @@
 <section id="drivers-info" class="drivers-info">
-  <h2 class="drivers-info__title">{{ 'OUR_DRIVERS' | translate }}</h2>
-  <p class="drivers-info__text">
-    {{ 'OUR_DRIVERS_DESCRIPTION' | translate }}
-  </p>
+  @if (i18n.currentLang()) {
+    <h2 class="drivers-info__title">{{ 'OUR_DRIVERS' | translate }}</h2>
+    <p class="drivers-info__text">
+      {{ 'OUR_DRIVERS_DESCRIPTION' | translate }}
+    </p>
+  }
 </section>

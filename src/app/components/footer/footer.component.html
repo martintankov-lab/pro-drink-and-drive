@@ -1,16 +1,18 @@
 <footer id="footer" class="footer">
-  <div class="footer__grid">
-    <div class="footer__col">
-      <h3 class="footer__title">{{ 'FOOTER_ABOUT_TITLE' | translate }}</h3>
-      <p class="footer__text">{{ 'FOOTER_ABOUT_TEXT' | translate }}</p>
+  @if (i18n.currentLang()) {
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h3 class="footer__title">{{ 'FOOTER_ABOUT_TITLE' | translate }}</h3>
+        <p class="footer__text">{{ 'FOOTER_ABOUT_TEXT' | translate }}</p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title">{{ 'FOOTER_CONTACTS_TITLE' | translate }}</h3>
+        <p class="footer__text">
+          {{ 'FOOTER_PHONE_LINE' | translate }}<br />
+          {{ 'FOOTER_EMAIL_LINE' | translate }}<br />
+          {{ 'FOOTER_WEBSITE_LINE' | translate }}
+        </p>
+      </div>
     </div>
-    <div class="footer__col">
-      <h3 class="footer__title">{{ 'FOOTER_CONTACTS_TITLE' | translate }}</h3>
-      <p class="footer__text">
-        {{ 'FOOTER_PHONE_LINE' | translate }}<br />
-        {{ 'FOOTER_EMAIL_LINE' | translate }}<br />
-        {{ 'FOOTER_WEBSITE_LINE' | translate }}
-      </p>
-    </div>
-  </div>
+  }
 </footer>

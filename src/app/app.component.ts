@@ -1,8 +1,7 @@
-import { ApplicationRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { Meta, Title } from '@angular/platform-browser';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor(private meta: Meta, private title: Title, private appRef: ApplicationRef, private translateService: TranslateService) {
+  constructor(private meta: Meta, private title: Title) {
     this.title.setTitle('Pro Drink and Drive – професионален „дринк енд драйв“ в София');
 
     this.meta.addTags([
@@ -59,12 +58,5 @@ export class AppComponent {
         content: 'https://prodrinkanddrive.bg/assets/images/pro-drink-and-drive.jpeg',
       },
     ]);
-
-    // fix for translations not updating in the app when changing the language
-    this.translateService.onLangChange.subscribe(() => {
-      setTimeout(() => {
-        this.appRef.tick();
-      }, 100);
-    });
   }
 }

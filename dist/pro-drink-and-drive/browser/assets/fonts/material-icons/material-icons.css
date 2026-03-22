@@ -9,8 +9,10 @@
   src: url('./material-icons.woff2') format('woff2');
 }
 
+/* Apply to both Angular Material’s .mat-icon and .material-icons so body’s Roboto never overrides */
+.mat-icon,
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: 'Material Icons' !important;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;

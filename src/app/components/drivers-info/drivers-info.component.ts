@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { I18nService } from '../../services/i18n.service';
 
 @Component({
   selector: 'app-drivers-info',
@@ -8,4 +9,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './drivers-info.component.html',
   styleUrl: './drivers-info.component.scss',
 })
-export class DriversInfoComponent {}
+export class DriversInfoComponent {
+  constructor(public i18n: I18nService) {}
+}
