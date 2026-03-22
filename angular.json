@@ -51,6 +51,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "*.json",
+                "input": "src/app/i18n",
+                "output": "/assets/i18n"
               }
             ],
             "styles": [
